@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.cx_*/
+BinaryConfigPack.ss
+screenshots/
+bin_extracted/

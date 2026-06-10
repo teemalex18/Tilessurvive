@@ -1,0 +1,12 @@
+cx_update_team_builder.py
+embedded BP bytes=96140
+formula comment=формула верифицирована 4/4, 2026-06-10
+
+CONTROL VERIFICATION
+becca: actual=534042, expected=534042, status=PASSED
+tara: actual=476601, expected=476601, status=PASSED
+rosie: actual=2282570, expected=2282570, status=PASSED
+tarzan: actual=531112, expected=531112, status=PASSED
+
+data verification=PASSED
+browser verification=PENDING
