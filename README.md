@@ -4,6 +4,8 @@ Static Team Builder using BattlePower values extracted from Tiles Survive game
 configuration data.
 
 Open `index.html` locally or publish the repository with GitHub Pages.
+Hero profiles and gear inventory can be saved separately in each visitor's
+browser by explicit save buttons.
 
 Полное описание реализованной функциональности, источников данных, формул,
 архитектуры и ограничений: [PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md).

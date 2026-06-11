@@ -47,6 +47,16 @@ def main():
     assert "level: 120" in html
     assert 'max="150"' in html
     assert 'becka: "becca"' in html
+    assert 'const STORAGE_KEY = "tiles-survive-team-builder-v1"' in html
+    assert "useState(loadSavedStates)" in html
+    assert "useState(loadSavedInventory)" in html
+    assert "localStorage.setItem(STORAGE_KEY" in html
+    assert "function saveHero(heroId)" in html
+    assert "function saveInventory()" in html
+    assert "Сохранить героя" in html
+    assert "Сохранить инвентарь" in html
+    assert "useEffect(" not in html
+    assert "gear: fallback.gear" in html
 
     controls = {
         "two_plus_two_plus_wildcard": ((2, 2, 1), (0.10, 3, 2)),
