@@ -1,0 +1,10 @@
+{
+  "name": "tiles-survive-team-builder",
+  "private": true,
+  "scripts": {
+    "test": "playwright test tests/team_builder.spec.js --reporter=line"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.60.0"
+  }
+}

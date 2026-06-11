@@ -40,7 +40,7 @@ def main():
         assert levels["150"] == expected, (rarity, levels["150"], expected)
 
     heroes_block = html[html.index("const HEROES"):html.index("const RARITY")]
-    hero_ids = re.findall(r'\{ id: "([^"]+)",\s+name:', heroes_block)
+    hero_ids = re.findall(r'\{\s+id: "([^"]+)",\s+name:', heroes_block)
     factions = re.findall(r'faction: "(strong|bandit|airship)"', heroes_block)
     assert len(hero_ids) == 25, len(hero_ids)
     assert len(factions) == len(hero_ids), (len(factions), len(hero_ids))
@@ -50,13 +50,30 @@ def main():
     assert 'const STORAGE_KEY = "tiles-survive-team-builder-v1"' in html
     assert "useState(loadSavedStates)" in html
     assert "useState(loadSavedInventory)" in html
-    assert "localStorage.setItem(STORAGE_KEY" in html
+    assert re.search(r"localStorage\.setItem\(\s*STORAGE_KEY", html)
     assert "function saveHero(heroId)" in html
     assert "function saveInventory()" in html
     assert "Сохранить героя" in html
     assert "Сохранить инвентарь" in html
     assert "useEffect(" not in html
     assert "gear: fallback.gear" in html
+    assert "version: 3" in html
+    assert "function defaultTeamConfig()" in html
+    assert "function teamMetrics(config, states, inventory)" in html
+    assert "const [teams, setTeams] = useState([defaultTeamConfig(), defaultTeamConfig()])" in html
+    assert "Скопировать №1 → №2" in html
+    assert "Разница №2 к №1" in html
+    assert "function usedGearIds(teamIdx, slotId, exceptHeroId)" in html
+    assert "function renderTeam(teamIdx)" in html
+    assert "renderTeam(0)" in html
+    assert "renderTeam(1)" in html
+    assert "team-panel-" in html
+    assert "team-tab-" not in html
+    assert "piece.id" in html
+    assert 'id: `${slot.id}-${idx + 1}`' in html
+    assert "gearByHero" in html
+    assert "setHeroGearPiece" in html
+    assert "pieces[i]?.id || null" in html
 
     controls = {
         "two_plus_two_plus_wildcard": ((2, 2, 1), (0.10, 3, 2)),

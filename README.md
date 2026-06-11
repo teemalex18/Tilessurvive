@@ -5,7 +5,9 @@ configuration data.
 
 Open `index.html` locally or publish the repository with GitHub Pages.
 Hero profiles and gear inventory can be saved separately in each visitor's
-browser by explicit save buttons.
+browser by explicit save buttons. Two independent team variants can use the
+same saved roster and inventory for comparison. Both teams are shown
+simultaneously, one below the other.
 
 Полное описание реализованной функциональности, источников данных, формул,
 архитектуры и ограничений: [PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md).
@@ -26,3 +28,11 @@ python cx_verify_team_builder.py
 ```
 
 The game package itself is not included in this repository.
+
+## Verification
+
+```powershell
+python cx_verify_team_builder.py
+npm install
+npm test
+```
